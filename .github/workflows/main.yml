@@ -88,16 +88,14 @@ jobs:
                     echo 'EOF' >> $GITHUB_ENV
 
             -   name: Create PR with dist
-                uses: peter-evans/create-pull-request@v5
+                uses: peter-evans/create-pull-request@v7
                 with:
-                    commit-message: Build dist
-                    author: "actions-bot <github-actions-bot@google.com>"
+                    commit-message: "chore: build dist"
                     title: "chore: build dist"
                     body: |
                         Build dist PR
                         ${{env.DIFF}}
                     labels: automated pr
-                    branch: create-pull-request/build-dist
                     delete-branch: true
 
     lint:
