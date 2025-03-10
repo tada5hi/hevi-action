@@ -88,7 +88,7 @@ jobs:
                     echo 'EOF' >> $GITHUB_ENV
 
             -   name: Create PR with dist
-                uses: peter-evans/create-pull-request@v5
+                uses: peter-evans/create-pull-request@v7
                 with:
                     commit-message: Build dist
                     author: "actions-bot <github-actions-bot@google.com>"
