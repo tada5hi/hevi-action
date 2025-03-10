@@ -1,0 +1,40 @@
+name: 'hevi-action'
+description: 'A github action to version helm chart(s)'
+author: 'tada5hi'
+
+branding:
+    icon: 'heart'
+    color: 'black'
+
+inputs:
+    branch:
+        description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
+        required: false
+        default: ${{ github.head_ref }}
+    token:
+        description: 'Token to access registry'
+        default: ${{ github.token }}
+    commit:
+        description: Commit changes
+        required: false
+    commit_user_name:
+        description: Name used for the commit user
+        required: false
+        default: github-actions[bot]
+    commit_user_email:
+        description: Email address used for the commit user
+        required: false
+        default: 41898282+github-actions[bot]@users.noreply.github.com
+    commit_author:
+        description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
+        required: false
+        default: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+    push:
+        description: Push changes
+        required: false
+    directory:
+        description: Directory to look for Chart.yaml file
+
+runs:
+    using: node20
+    main: dist/index.js
