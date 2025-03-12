@@ -23,6 +23,9 @@ export async function run() : Promise<void> {
 
             push: getBooleanInput('push', { required: false }),
             branch: getInput('branch'),
+
+            version: getInput('version'),
+            versionType: getInput('version_type'),
         });
 
         for (let i = 0; i < charts.length; i++) {
