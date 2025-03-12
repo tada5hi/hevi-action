@@ -16,22 +16,24 @@ inputs:
         default: ${{ github.token }}
     commit:
         description: Commit changes
-        required: false
+        required: true
+        default: FALSE
     commit_user_name:
         description: Name used for the commit user
-        required: false
+        required: true
         default: github-actions[bot]
     commit_user_email:
         description: Email address used for the commit user
-        required: false
+        required: true
         default: 41898282+github-actions[bot]@users.noreply.github.com
     commit_author:
         description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
-        required: false
+        required: true
         default: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
     push:
         description: Push changes
-        required: false
+        required: true
+        default: FALSE
     directory:
         description: Directory to look for Chart.yaml file(s)
     version:

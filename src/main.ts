@@ -14,18 +14,18 @@ export async function run() : Promise<void> {
     try {
         const charts = await execute({
             provider: 'github',
-            token: getInput('token'),
+            token: getInput('token', { required: true }),
 
-            commit: getBooleanInput('commit', { required: false }),
-            commitUserName: getInput('commit_user_name'),
-            commitUserEmail: getInput('commit_user_email'),
-            commitAuthor: getInput('commit_author'),
+            commit: getBooleanInput('commit', { required: true }),
+            commitUserName: getInput('commit_user_name', { required: true }),
+            commitUserEmail: getInput('commit_user_email', { required: true }),
+            commitAuthor: getInput('commit_author', { required: true }),
 
-            push: getBooleanInput('push', { required: false }),
-            branch: getInput('branch'),
+            push: getBooleanInput('push', { required: true }),
+            branch: getInput('branch') || undefined,
 
-            version: getInput('version'),
-            versionType: getInput('version_type'),
+            version: getInput('version') || undefined,
+            versionType: getInput('version_type') || undefined,
         });
 
         for (let i = 0; i < charts.length; i++) {
