@@ -7,17 +7,44 @@ branding:
     color: 'black'
 
 inputs:
-    branch:
-        description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
-        required: false
-        default: ${{ github.head_ref }}
+    directory:
+        description: Directory to look for Chart.yaml file(s)
+        default: charts
     token:
         description: Token to interact with GitHub
         default: ${{ github.token }}
-    commit:
+    package:
+        description: Package charts?
+        required: true
+        default: false
+    release:
+        description: Release packages?
+        required: true
+        default: false
+    release_branch:
+        description: Git branch, where to publish helm repo index.yaml
+        required: true
+        default: gh-pages
+    versionize:
+        description: Versionize charts?
+        required: false
+        default: false
+    versionize_commit:
         description: Commit changes
         required: true
-        default: FALSE
+        default: false
+    versionize_push:
+        description: Push changes
+        required: true
+        default: false
+    versionize_branch:
+        description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
+        required: false
+        default: ${{ github.head_ref }}
+    versionize_version:
+        description: Specify a specific version
+    versionize_version_type:
+        description: Specify a version type (app, default)
     commit_user_name:
         description: Name used for the commit user
         required: true
@@ -30,16 +57,6 @@ inputs:
         description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
         required: true
         default: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
-    push:
-        description: Push changes
-        required: true
-        default: FALSE
-    directory:
-        description: Directory to look for Chart.yaml file(s)
-    version:
-        description: Specify a specific version
-    version_type:
-        description: Specify a version type (app, default)
 
 runs:
     using: node20
