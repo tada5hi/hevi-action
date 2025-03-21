@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/tada5hi/hevi-action/compare/v1.0.3...v1.1.0) (2025-03-21)
+
+
+### Features
+
+* upgraded hevi version to v1.4.0 ([9f1348e](https://github.com/tada5hi/hevi-action/commit/9f1348eb828c594d26723d87ecdb6feb7a513610))
+
+
+### Bug Fixes
+
+* add missing return statement ([cda9658](https://github.com/tada5hi/hevi-action/commit/cda965820be643ff6caa314f382903d136035667))
+
 ## [1.0.3](https://github.com/tada5hi/hevi-action/compare/v1.0.2...v1.0.3) (2025-03-13)
 
 
