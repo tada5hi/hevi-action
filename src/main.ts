@@ -57,6 +57,8 @@ export async function run() : Promise<void> {
             }
         } catch (e) {
             if (e instanceof Error) setFailed(e.message);
+
+            return;
         }
     }
 
