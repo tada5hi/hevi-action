@@ -29,34 +29,8 @@ inputs:
         description: Versionize charts?
         required: false
         default: false
-    versionize_commit:
-        description: Commit changes
-        required: true
-        default: false
-    versionize_push:
-        description: Push changes
-        required: true
-        default: false
-    versionize_branch:
-        description: Git branch name, where changes should be pushed too. Required if Action is used on the `pull_request` event
-        required: false
-        default: ${{ github.head_ref }}
     versionize_version:
         description: Specify a specific version
-    versionize_version_type:
-        description: Specify a version type (app, default)
-    commit_user_name:
-        description: Name used for the commit user
-        required: true
-        default: github-actions[bot]
-    commit_user_email:
-        description: Email address used for the commit user
-        required: true
-        default: 41898282+github-actions[bot]@users.noreply.github.com
-    commit_author:
-        description: Value used for the commit author. Defaults to the username of whoever triggered this workflow run.
-        required: true
-        default: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
 
 runs:
     using: node20

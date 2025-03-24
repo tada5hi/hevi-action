@@ -23,19 +23,7 @@ export async function run() : Promise<void> {
     if (versionize) {
         try {
             const charts = await helmChartManager.versionizeCharts({
-                commit: getBooleanInput(InputName.VERSIONIZE_COMMIT, { required: true }),
-                commitUserName: getInput(InputName.COMMIT_USER_NAME, { required: true }),
-                commitUserEmail: getInput(InputName.COMMIT_USER_EMAIL, { required: true }),
-                commitAuthor: getInput(InputName.COMMIT_AUTHOR, { required: true }),
-
-                branch: getInput(InputName.VERSIONIZE_BRANCH) || undefined,
-
                 version: getInput(InputName.VERSIONIZE_VERSION) || undefined,
-                versionType: getInput(InputName.VERSIONIZE_VERSION_TYPE) || undefined,
-
-                push: getBooleanInput(InputName.VERSIONIZE_PUSH, { required: true }),
-
-                token,
             });
 
             for (let i = 0; i < charts.length; i++) {
