@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/tada5hi/hevi-action/compare/v1.2.0...v1.3.0) (2025-03-24)
+
+
+### Features
+
+* bump hevi to v1.6.0 ([b2bb8d7](https://github.com/tada5hi/hevi-action/commit/b2bb8d7d866224e77bee246ba927499cebb7ba5b))
+
 ## [1.2.0](https://github.com/tada5hi/hevi-action/compare/v1.1.0...v1.2.0) (2025-03-24)
 
 
