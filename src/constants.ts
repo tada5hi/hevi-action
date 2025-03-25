@@ -15,6 +15,14 @@ export enum InputName {
     PACKAGE = 'package',
 
     /**
+     * Push command
+     */
+    PUSH = 'push',
+    PUSH_HOST = 'push_host',
+    PUSH_USERNAME = 'push_username',
+    PUSH_PASSWORD = 'push_password',
+
+    /**
      * Release command
      */
     RELEASE = 'release',
@@ -25,4 +33,5 @@ export enum InputName {
      */
     VERSIONIZE = 'versionize',
     VERSIONIZE_VERSION = 'versionize_version',
+
 }

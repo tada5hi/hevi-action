@@ -17,6 +17,16 @@ inputs:
         description: Package charts?
         required: true
         default: false
+    push:
+        description: Push charts to (oci) registry?
+        required: true
+        default: false
+    push_host:
+        description: Host of registry
+    push_username:
+        description: Username of registry
+    push_password:
+        description: Password of registry
     release:
         description: Release packages?
         required: true

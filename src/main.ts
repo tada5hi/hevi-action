@@ -64,4 +64,20 @@ export async function run() : Promise<void> {
             if (e instanceof Error) setFailed(e.message);
         }
     }
+
+    const push = getBooleanInput(InputName.PUSH, { required: true });
+    if (push) {
+        try {
+            const charts = await helmChartManager.pushCharts({
+                host: getInput(InputName.PUSH_HOST),
+                username: getInput(InputName.PUSH_USERNAME),
+                password: getInput(InputName.PUSH_PASSWORD),
+            });
+            for (let i = 0; i < charts.length; i++) {
+                info(`pushed chart ${charts[i].data.name}`);
+            }
+        } catch (e) {
+            if (e instanceof Error) setFailed(e.message);
+        }
+    }
 }

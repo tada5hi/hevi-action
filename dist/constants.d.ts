@@ -6,6 +6,13 @@ export declare enum InputName {
      */
     PACKAGE = "package",
     /**
+     * Push command
+     */
+    PUSH = "push",
+    PUSH_HOST = "push_host",
+    PUSH_USERNAME = "push_username",
+    PUSH_PASSWORD = "push_password",
+    /**
      * Release command
      */
     RELEASE = "release",
