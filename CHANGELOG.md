@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/tada5hi/hevi-action/compare/v1.3.0...v1.4.0) (2025-03-25)
+
+
+### Features
+
+* integrate push command ([3c84335](https://github.com/tada5hi/hevi-action/commit/3c84335c8d492cf040bd4cdc940ffe525539f293))
+
 ## [1.3.0](https://github.com/tada5hi/hevi-action/compare/v1.2.0...v1.3.0) (2025-03-24)
 
 
