@@ -90,6 +90,7 @@ jobs:
             -   name: Create PR with dist
                 uses: peter-evans/create-pull-request@v7
                 with:
+                    base: ${{ github.head_ref || github.ref_name }}
                     commit-message: "chore: build dist"
                     title: "chore: build dist"
                     body: |
