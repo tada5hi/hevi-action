@@ -149,7 +149,7 @@ jobs:
                     fi
                     exit 0
 
-            -   uses: googleapis/release-please-action@v4
+            -   uses: googleapis/release-please-action@v5
                 id: release
                 if: steps.diff.outputs.IS_EQUAL == 'true'
                 with:
