@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="hevi-action-a-title hevi-action-a-desc">
+<title id="hevi-action-a-title">hevi-action — Chart delivery</title>
+<desc id="hevi-action-a-desc">A Helm chart package carries a small wheel above a completed workflow arrow.</desc>
+<style>
+:root{--accent:#268bc5;--second:#26aebd;--ink:#253447;--paper:#f7fafc;--line:#8394a7;--wash:#268bc518}
+@media(prefers-color-scheme:dark){:root{--ink:#e4ebf3;--paper:#182332;--line:#8495aa;--wash:#268bc522}}
+.a{stroke:var(--accent)}.b{stroke:var(--second)}.af{fill:var(--accent)}.bf{fill:var(--second)}.ink{fill:var(--ink)}.paper{stroke:var(--line)}.line{stroke:var(--line)}.wash{fill:var(--wash)}.white{fill:#fff}.neutral{fill:var(--paper)}
+</style>
+<path d="M43 95 L128 48 L213 95 V183 L128 230 L43 183 Z" class="a" stroke-width="5" fill="var(--paper)" stroke-linecap="round" stroke-linejoin="round" /><path d="M43 95 L128 143 L213 95 M128 143 V230" class="a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M84 73 L169 120 V157 L147 170 V132 L62 85" class="b" stroke-width="4" fill="var(--wash)" stroke-linecap="round" stroke-linejoin="round" /><circle cx="129" cy="75" r="23" class="neutral" stroke="var(--accent)" stroke-width="5"/><path d="M129 45 V105 M99 75 H159 M108 54 L150 96 M108 96 L150 54" class="a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="129" cy="75" r="8" class="bf" /><path d="M28 218 H80 M66 205 L80 218 L66 231" class="b" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
