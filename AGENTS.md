@@ -1,7 +1,5 @@
 # Hevi Action agent guide
 
-Use this guide as the entry point. Read linked guides on demand before changing their areas.
-
 This JavaScript GitHub Action uses `hevi` to version, package, push and release Helm charts.
 
 ## Commands
