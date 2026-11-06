@@ -46,6 +46,29 @@ Commit your charts under `charts/`, or change `directory`. Consumers do not run 
 
 To also create GitHub releases and update the chart repository index, grant `contents: write` and set `release: true` alongside `package: true`. To push to an OCI registry, enable `push` and supply `push_host`, `push_username` and `push_password` from your registry configuration and secrets. These flags do not enable packaging automatically. OCI pushes consume `.hevi/packages/<name>-<version>.tgz`; package in the same step or supply those archives from an earlier step.
 
+### GitHub release prerequisites
+
+Before enabling `release`, create the default `gh-pages` branch once and fetch it into the checkout. Chart-releaser creates a worktree from the fetched publication branch and commits the updated index, so it also needs a Git author and committer identity. The release job needs `contents: write`.
+
+Use these steps in the release job after the branch exists:
+
+```yaml
+- uses: actions/checkout@v4
+  with:
+    fetch-depth: 0
+- name: Configure release commit identity
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+- uses: tada5hi/hevi-action@v1
+  with:
+    directory: charts
+    package: true
+    release: true
+```
+
+`fetch-depth: 0` fetches all branch history; explicitly fetching the existing publication branch is an alternative. Configure a different valid Git identity when your release account requires one.
+
 ## Inputs
 
 | Input | Type | Default | Behavior |
