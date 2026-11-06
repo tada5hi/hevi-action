@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/tada5hi/hevi-action/compare/v1.4.0...v1.4.1) (2026-11-06)
+
+
+### Bug Fixes
+
+* pass packaged chart archives to helm push ([#52](https://github.com/tada5hi/hevi-action/issues/52)) ([dba1726](https://github.com/tada5hi/hevi-action/commit/dba1726d9554e57b7e34bc3c68e92b519d8f90a9))
+
 ## [1.4.0](https://github.com/tada5hi/hevi-action/compare/v1.3.0...v1.4.0) (2025-03-25)
 
 
