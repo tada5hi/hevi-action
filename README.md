@@ -44,7 +44,7 @@ jobs:
 
 Commit your charts under `charts/`, or change `directory`. Consumers do not run `npm install`; GitHub executes the committed `dist/index.js` using the Node runtime declared in [action.yml](action.yml).
 
-To also create GitHub releases and update the chart repository index, grant `contents: write` and set `release: true` alongside `package: true`. To push to an OCI registry, enable `push` and supply `push_host`, `push_username` and `push_password` from your registry configuration and secrets. These flags do not enable packaging automatically.
+To also create GitHub releases and update the chart repository index, grant `contents: write` and set `release: true` alongside `package: true`. To push to an OCI registry, enable `push` and supply `push_host`, `push_username` and `push_password` from your registry configuration and secrets. These flags do not enable packaging automatically. OCI pushes consume `.hevi/packages/<name>-<version>.tgz`; package in the same step or supply those archives from an earlier step.
 
 ## Inputs
 
