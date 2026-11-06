@@ -45,8 +45,11 @@ it('runs the action bundle without a node_modules directory', async () => {
 });
 
 
-it('pushes the archive created by packaging through the standalone OCI action', async () => {
-    const { directory, bin } = await createHelmFixture();
+it.each([
+    { version: '1.2.3', archive: 'demo-1.2.3.tgz' },
+    { version: '1.2.3-rc.tgz', archive: 'demo-1.2.3-rc.tgz.tgz' },
+])('pushes packaged chart $version through the standalone OCI action', async ({ version, archive }) => {
+    const { directory, bin } = await createHelmFixture(version);
 
     try {
         await copyFile(fileURLToPath(new URL('../../dist/index.js', import.meta.url)), path.join(directory, 'index.js'));
@@ -74,7 +77,7 @@ it('pushes the archive created by packaging through the standalone OCI action', 
         expect(result.error).toBeUndefined();
         expect(result.stderr).toBe('');
         expect(result.status, result.stdout).toBe(0);
-        expect(await readFile(path.join(directory, 'pushed-archive'), 'utf8')).toBe('demo-1.2.3.tgz');
+        expect(await readFile(path.join(directory, 'pushed-archive'), 'utf8')).toBe(archive);
     } finally {
         await rm(directory, { recursive: true, force: true });
     }
