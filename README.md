@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/tada5hi/hevi-action/4eda984d79592573d013a8387c664fc6792e2af5/.github/assets/logo.svg" width="144" height="144" alt="hevi-action logo">
+  <img src="https://raw.githubusercontent.com/tada5hi/hevi-action/4d471769249c45e525942fbf6494c62fa6ecb20c/.github/assets/logo.svg" width="144" height="144" alt="hevi-action logo">
   <h1>hevi-action</h1>
   <p><strong>A github action to use hevi</strong></p>
   <p><a href="https://github.com/tada5hi/hevi-action/releases"><img src="https://img.shields.io/github/v/release/tada5hi/hevi-action" alt="Latest release"></a> <a href="https://github.com/tada5hi/hevi-action/actions/workflows/main.yml"><img src="https://github.com/tada5hi/hevi-action/actions/workflows/main.yml/badge.svg" alt="CI status"></a> <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/github/license/tada5hi/hevi-action" alt="License"></a></p>
@@ -20,7 +20,7 @@ Run [hevi](https://github.com/tada5hi/hevi)'s Helm chart operations from a workf
 | Publication | Call GitHub release/index and OCI operations | Enable `release` or `push` with the relevant credentials |
 | Ordering | Maintain the sequence in your workflow | Version, package, release, then push |
 
-<img src="https://raw.githubusercontent.com/tada5hi/hevi-action/4eda984d79592573d013a8387c664fc6792e2af5/.github/assets/mechanism.svg" width="960" alt="The action loads charts from directory, then runs enabled versionize, package, release and push operations in that order. All four flags default to false; enabling release or push does not enable package.">
+<img src="https://raw.githubusercontent.com/tada5hi/hevi-action/4d471769249c45e525942fbf6494c62fa6ecb20c/.github/assets/mechanism.svg" width="960" alt="The action loads charts from directory, then runs enabled versionize, package, release and push operations in that order. All four flags default to false; enabling release or push does not enable package.">
 
 ## Usage
 
