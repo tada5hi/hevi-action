@@ -11,11 +11,11 @@ import {
     info,
     setFailed,
 } from '@actions/core';
-import { HelmChartManager } from 'hevi';
+import { ActionHelmChartManager } from './chart-manager';
 import { InputName } from './constants';
 
 export async function run() : Promise<void> {
-    const helmChartManager = new HelmChartManager();
+    const helmChartManager = new ActionHelmChartManager();
 
     const directory = getInput(InputName.DIRECTORY) || 'charts';
 
